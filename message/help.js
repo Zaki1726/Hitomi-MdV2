@@ -45,6 +45,7 @@ _*${ucapanWaktu} ${pushname !== undefined ? pushname : 'Kak'} 👋*_
  ${setting.sb} ${prefix}cekprem
  ${setting.sb} ${prefix}listprem
  ${setting.sb} ${prefix}join
+ ${setting.sb} ${prefix}sewabot
 
  *CONVERTER/TOOLS*
  ${setting.sb} ${prefix}sticker
