@@ -155,6 +155,18 @@ _*${ucapanWaktu} ${pushname !== undefined ? pushname : 'Kak'} 👋*_
  ${setting.sb} ${prefix}addprem
  ${setting.sb} ${prefix}delprem
 
-\`\`\`${setting.botName} Powered Nodejs\`\`\`
+*RANDOM MENU*
+ ${setting.sb} ${prefix}cekme
+ ${setting.sb} ${prefix}cekbapak
+
+\`\`\`${setting.botName}\`\`\`
+
+  *THANKS TO*
+
+  - My God
+  - Baileys-Md (Adiwa Jshing)
+  - Ifran / Rtwone
+  - Christian ID
+  - Zkyze
 `
 }
