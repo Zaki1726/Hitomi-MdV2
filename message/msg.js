@@ -1556,6 +1556,36 @@ Sanksi: *PERMANENT BLOCK*
 
 conn.sendMessage(from, { caption: rules, image: pp_bot }, {quoted: fdoc})
 break
+case prefix+'cekme':
+
+  case prefix+'me':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  const ganteng = ['Cakep ✔️','Jelek Anjrit ❌']
+  const sifat = ['Pembohong','Galak','Suka Bantu Orang','Baik','Jahat:(','Bobrok','Suka BadMood','Setia','Tulus','Beriman','Penyayang Binatang','Baperan']
+  const suka = ['Makan','Tidur','Main Game','Sesama Jenis','Binatang',`Seseorang Yang ${pushname} Sukai`,'Belajar','Ibadah','Diri Sendiri']
+  const nomernyah = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','31','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','82','84','84','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+  const keberanian = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','31','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','82','84','84','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+  const kepinteran = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','31','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','82','84','84','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const ganz = ganteng[Math.floor(Math.random() * ganteng.length)]
+					const sipat = sifat[Math.floor(Math.random() * sifat.length)]
+					const numb = nomernyah[Math.floor(Math.random() * nomernyah.length)]
+					const gai = suka[Math.floor(Math.random() * suka.length)]
+					const berani = keberanian[Math.floor(Math.random() * keberanian.length)]
+					const pinter = kepinteran[Math.floor(Math.random() * kepinteran.length)]
+  var cek = `*[ CEK PRIBADI KAMU ]*
+ 
+Nama : ${pushname}
+Sifat : ${sipat}
+Keberanian : ${berani}%
+Ketakutan : ${numb}%
+Cakep : ${ganz}
+Cek Pintar : ${pinter}%
+Menyukai : ${gai}
+  `
+
+					 conn.profilePictureUrl(from, 'image').then( res => conn.sendMessage(from, {caption: cek, image: { url: res }}, {quoted: msg})).catch(() => conn.sendMessage(from, {caption: cek, image: {url: `https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg`}}, {quoted: msg}))
+				    limitAdd(sender, limit)
+				    break
 case prefix+'horror':
 if (args.length < 2) return reply(`Kirim perintah ${command} ${setting.ownerName}`)
 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
