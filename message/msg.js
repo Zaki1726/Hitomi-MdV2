@@ -470,6 +470,17 @@ break
                 }
                 mentions(txt, men, true)
                 break
+case prefix+'sewabot': case prefix+'sewa':
+
+var sewa =`*SEWA BOTZ*
+1 minggu : 3k
+1 bulan : 5k
+permanen : 10k
+Mau Sewa? :
+Chat : wa.me/${setting.ownerNumber}
+`
+conn.sendMessage(from, { caption: sewa, image: pp_bot }, {quoted: fdoc})
+break
 	        // Converter & Tools Menu
 			case prefix+'sticker': case prefix+'stiker': case prefix+'s':
 			    if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
