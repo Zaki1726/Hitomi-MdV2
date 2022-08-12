@@ -1529,9 +1529,9 @@ var data = await fetchJson(`https://hitomi-rest-api.herokuapp.com/api/transforme
 reply(mess.wait)
 conn.sendMessage(from, {caption: `*© ${setting.botName}*`, image: {url: data.result.result}}, {quoted: fdoc})
 break
-case prefix+'rules'
+case prefix+'rulesbot': case prefix+'rules':
 
-var rul = `◈───〖 *RULES* 〗───◈
+var rules = `◈───〖 *RULES* 〗───◈
 
 1. Tolong Gunakan Delay 5 Detik Untuk Menggukan BOT
 2. Gunakan Dengan Bijak.
@@ -1551,9 +1551,10 @@ var rul = `◈───〖 *RULES* 〗───◈
 - Bot Akan Memblokir Nomor Anda.
 - Anda Tidak Akan Bisa Mengakses Bot Lagi.
 - Mengeksploitasi Terhadap bot.
-Sanksi: *PERMANENT BLOCK*`
+Sanksi: *PERMANENT BLOCK*
+`
 
-conn.sendMessage(from, { caption: rul, image: pp_bot }, {quoted: fdoc})
+conn.sendMessage(from, { caption: rules, image: pp_bot }, {quoted: fdoc})
 break
 case prefix+'horror':
 if (args.length < 2) return reply(`Kirim perintah ${command} ${setting.ownerName}`)
